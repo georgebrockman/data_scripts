@@ -21,7 +21,7 @@ def remove_grayscale(dir_path):
     images = []
     classes = []
     for i, c in enumerate(class_folders):
-        #images_per_class = sorted(os.path.join(path, c))
+        # sort through files in class directories and check if JPEG
         images_per_class = [f for f in sorted(os.listdir(os.path.join(path, c))) if 'jpg' in f]
 
         for image_per_class in images_per_class:
